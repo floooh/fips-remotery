@@ -13,6 +13,9 @@ if (FIPS_LINUX OR FIPS_MACOS OR FIPS_WINDOWS)
     fips_begin_lib(Remotery)
         fips_dir(Remotery/lib GROUP ".")
         fips_files(Remotery.c Remotery.h)
+        if (FIPS_LINUX)
+            fips_libs(rt)
+        endif()
     fips_end_lib()
 
     # silence some warnings when compiling remotery
