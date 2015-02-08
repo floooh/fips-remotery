@@ -1,0 +1,9 @@
+#
+# fips-remotery
+#
+---
+exports:
+    header-dirs:
+        - Remotery/lib
+    modules:
+        Remotery:   .
