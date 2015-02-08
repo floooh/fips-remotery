@@ -16,8 +16,8 @@ fips_begin_lib(Remotery)
 fips_end_lib()
 
 # silence some warnings when compiling remotery
-if (FIPS_MACOS OR FIPS_LINUX)
-    set_target_properties(Remotery PROPERTIES COMPILE_FLAGS "-Wno-missing-field-initializers -Wno-unused-function -Wno-unused-but-set-variable")
+if (FIPS_CLANG)
+    set_target_properties(Remotery PROPERTIES COMPILE_FLAGS "-Wno-missing-field-initializers -Wno-unused-function")
 endif()
 
 if (NOT FIPS_IMPORT)
